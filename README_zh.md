@@ -28,8 +28,14 @@
 
 
 <p align="center">
-  <video src="./assets/demo/VLX-Flow.mp4" controls muted width="88%"></video>
+  <a href="https://github.com/user-attachments/assets/5ac7966c-533d-4c06-a791-0d8adcf71777">
+    <img src="assets/figures/readme/demo-cover-zh.jpg" alt="VLX-Flow 介绍视频" width="88%">
+  </a>
+  <br>
+  <sub>介绍视频：VLX-Flow 面向连续视频理解的流式多模态模型。</sub>
 </p>
+
+https://github.com/user-attachments/assets/5ac7966c-533d-4c06-a791-0d8adcf71777
 
 
 ## 项目概览
