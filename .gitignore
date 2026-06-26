@@ -1,0 +1,8 @@
+.DS_Store
+__pycache__/
+*.pyc
+node_modules/
+dist/
+.agents/
+.codex/
+README_structure_draft*.md
