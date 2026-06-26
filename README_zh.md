@@ -27,12 +27,10 @@
 
 
 
-
-介绍视频文件已放在 `assets/demo/`。在确认 GitHub 视频渲染正常之前，README 中的视频嵌入暂时保持关闭。
-
 <p align="center">
   <video src="assets/demo/VLX-Flow.mp4" controls muted width="88%"></video>
 </p>
+
 
 ## 项目概览
 

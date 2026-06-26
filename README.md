@@ -24,12 +24,10 @@
 </p>
 
 
-
-The overview video asset is included in `assets/demo/`. The README embed is disabled until GitHub video rendering is verified.
-
 <p align="center">
   <video src="/assets/demo/0626_VLX-Flow_V2_en.mp4" controls muted width="88%"></video>
 </p>
+
 
 ## Overview
 
