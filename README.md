@@ -25,7 +25,7 @@
 
 
 <p align="center">
-  <video src="/assets/demo/0626_VLX-Flow_V2_en.mp4" controls muted width="88%"></video>
+  <video src="./assets/demo/0626_VLX-Flow_V2_en.mp4" controls muted width="88%"></video>
 </p>
 
 
