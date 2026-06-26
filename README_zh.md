@@ -14,7 +14,7 @@
   <a href="https://x.com/OmAI_lab">
     <img alt="X" src="https://img.shields.io/badge/%F0%9F%93%A3%20X-%E5%85%B3%E6%B3%A8%20%40OmAI_lab-000000">
   </a>
-  <a href="https://om-ai-lab.github.io/2026_06_25_vlx_flow_zh.html">
+  <a href="https://om-ai-lab.github.io/2026_06_26_vlx_flow_zh.html">
     <img alt="博客" src="https://img.shields.io/badge/%F0%9F%93%9D%20%E5%8D%9A%E5%AE%A2-%E9%98%85%E8%AF%BB%E6%96%87%E7%AB%A0-2563eb">
   </a>
   <a href="https://platform.om-agent.cn/subapp-index/#/front">

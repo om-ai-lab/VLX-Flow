@@ -14,7 +14,7 @@
   <a href="https://x.com/OmAI_lab">
     <img alt="X" src="https://img.shields.io/badge/%F0%9F%93%A3%20X-Follow%20%40OmAI_lab-000000">
   </a>
-  <a href="https://om-ai-lab.github.io/2026_06_25_vlx_flow_en.html">
+  <a href="https://om-ai-lab.github.io/2026_06_26_vlx_flow_en.html">
     <img alt="Blog" src="https://img.shields.io/badge/%F0%9F%93%9D%20Blog-Read%20Article-2563eb">
   </a>
   <img alt="Demo coming soon" src="https://img.shields.io/badge/%F0%9F%9A%80%20Demo-Coming%20Soon-94a3b8">
