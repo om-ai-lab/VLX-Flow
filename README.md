@@ -24,13 +24,7 @@
 </p>
 
 
-<p align="center">
-  <a href="https://github.com/user-attachments/assets/79b5e715-a7ff-4328-88a5-6e30b7cd8755">
-    <img src="assets/figures/readme/demo-cover-en.jpg" alt="VLX-Flow overview video" width="88%">
-  </a>
-  <br>
-  <sub>Overview video: VLX-Flow for continuous video understanding.</sub>
-</p>
+<p align="center"><sub>Overview video: VLX-Flow for continuous video understanding.</sub></p>
 
 https://github.com/user-attachments/assets/79b5e715-a7ff-4328-88a5-6e30b7cd8755
 
