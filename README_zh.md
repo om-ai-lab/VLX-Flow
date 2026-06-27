@@ -20,7 +20,7 @@
   <a href="https://platform.om-agent.cn/subapp-index/#/front">
     <img alt="体验页面" src="https://img.shields.io/badge/%F0%9F%9A%80%20%E4%BD%93%E9%AA%8C%E9%A1%B5%E9%9D%A2-%E7%AB%8B%E5%8D%B3%E4%BD%93%E9%AA%8C-16a34a">
   </a>
-  <a href="https://huggingface.co/blog/tianchez/vlx-flow">
+  <a href="https://huggingface.co/blog/omlab/vlx-flow">
     <img alt="Hugging Face 博客" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-%E9%98%85%E8%AF%BB%E6%96%87%E7%AB%A0-f9d54a">
   </a>
 </p>
