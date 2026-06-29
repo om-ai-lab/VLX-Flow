@@ -121,5 +121,5 @@ Checkpoints: Coming soon
 Follow Om AI Lab on [X](https://x.com/OmAI_lab), or scan the WeChat group QR code below for VLX updates and discussion.
 
 <p align="left">
-  <img src="assets/figures/qrcode.png" alt="WeChat community QR code" width="200">
+  <img src="assets/figures/qrcode.jpg" alt="WeChat community QR code" width="200">
 </p>

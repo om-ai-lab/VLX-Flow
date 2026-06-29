@@ -122,5 +122,5 @@ VLX-Flow 旨在支持多种在线视频理解工作流：
 你可以通过 [X](https://x.com/OmAI_lab) 关注 Om AI Lab，或扫描下方微信社群二维码关注 VLX 的更新与讨论。
 
 <p align="left">
-  <img src="assets/figures/qrcode.png" alt="微信社群二维码" width="200">
+  <img src="assets/figures/qrcode.jpg" alt="微信社群二维码" width="200">
 </p>
