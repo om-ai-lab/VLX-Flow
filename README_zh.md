@@ -14,10 +14,16 @@
   <a href="https://x.com/OmAI_lab">
     <img alt="X" src="https://img.shields.io/badge/%F0%9F%93%A3%20X-%E5%85%B3%E6%B3%A8%20%40OmAI_lab-000000">
   </a>
+  <a href="https://www.youtube.com/@OmAILab_global">
+    <img alt="YouTube" src="https://img.shields.io/badge/YouTube-OmAI%20Lab%20Global-FF0000?logo=youtube&logoColor=white">
+  </a>
+  <a href="https://discord.gg/c3BNhbcyd">
+    <img alt="Discord" src="https://img.shields.io/badge/Discord-Join%20Community-5865F2?logo=discord&logoColor=white">
+  </a>
   <a href="https://om-ai-lab.github.io/2026_06_26_vlx_flow_zh.html">
     <img alt="博客" src="https://img.shields.io/badge/%F0%9F%93%9D%20%E5%8D%9A%E5%AE%A2-%E9%98%85%E8%AF%BB%E6%96%87%E7%AB%A0-2563eb">
   </a>
-  <a href="https://platform.om-agent.cn/subapp-index/#/front">
+  <a href="https://om-agent.com">
     <img alt="体验页面" src="https://img.shields.io/badge/%F0%9F%9A%80%20%E4%BD%93%E9%AA%8C%E9%A1%B5%E9%9D%A2-%E7%AB%8B%E5%8D%B3%E4%BD%93%E9%AA%8C-16a34a">
   </a>
   <a href="https://huggingface.co/blog/omlab/vlx-flow">
@@ -29,14 +35,43 @@
 
 <p align="center"><sub>介绍视频：VLX-Flow 面向连续视频理解的流式多模态模型。</sub></p>
 
-https://github.com/user-attachments/assets/5ac7966c-533d-4c06-a791-0d8adcf71777
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=VoTLjBgCAKk">
+    <img src="assets/figures/readme/demo-cover-zh.jpg" alt="在 YouTube 上观看 VLX-Flow 介绍视频" width="88%">
+  </a>
+  <br>
+  📺 高清版本：<a href="https://www.youtube.com/watch?v=VoTLjBgCAKk">在 YouTube 上观看</a>
+</p>
 
+## 社区
+
+加入 VLX 社区，与开发者交流，探索应用，分享反馈，共同塑造多模态 AI 的未来。
+
+<table>
+  <tr>
+    <th align="center">Official WeChat</th>
+    <th align="center">Discord Community</th>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="assets/figures/社区二维码.png" alt="VLX 官方微信二维码" width="400">
+    </td>
+    <td align="center">
+      <img src="assets/figures/联系方式.png" alt="VLX Discord 社区二维码" width="400">
+    </td>
+  </tr>
+</table>
+
+如需技术支持、商务合作或社区咨询，请联系：**[marketing@hzlh.com](mailto:marketing@hzlh.com)**
 
 ## 项目概览
 
-VLX-Flow 是一个面向实时视频理解的流式视觉语言模型设计。它关注的场景不是把预录视频作为一次性文件处理，而是来自摄像头、机器人、无人机、媒体流或边缘设备的连续输入流。
+VLX-Flow 是一个流式视觉语言模型，使 AI 系统能够持续感知、理解并与实时视频流交互。它关注的场景不是把预录视频作为一次性文件处理，而是来自摄像头、机器人、无人机、媒体流或边缘设备的连续输入流。
 
 VLX-Flow 将输入视频拆成连续片段，编码每个新片段，并以增量方式更新模型内部的流式记忆。当用户提问时，模型可以直接从这份已维护的记忆中回答，而不需要从完整历史重新构建上下文。
+
+> [!TIP]
+> 🚀 **立即体验 VLX**：[点击这里](https://om-agent.com)，探索 VLX 如何让机器实时感知、推理并采取行动。
 
 <p align="center">
   <img src="assets/figures/readme/vlx-flow-overview.png" alt="VLX-Flow 总览图：流式片段、视觉缓存、语义记忆与低延迟交互" width="88%">
@@ -116,11 +151,3 @@ VLX-Flow 旨在支持多种在线视频理解工作流：
 ## 发布
 
 模型即将发布
-
-## 关注我们
-
-你可以通过 [X](https://x.com/OmAI_lab) 关注 Om AI Lab，或扫描下方微信社群二维码关注 VLX 的更新与讨论。
-
-<p align="left">
-  <img src="assets/figures/qrcode.jpg" alt="微信社群二维码" width="200">
-</p>

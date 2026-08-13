@@ -14,10 +14,18 @@
   <a href="https://x.com/OmAI_lab">
     <img alt="X" src="https://img.shields.io/badge/%F0%9F%93%A3%20X-Follow%20%40OmAI_lab-000000">
   </a>
+  <a href="https://www.youtube.com/@OmAILab_global">
+    <img alt="YouTube" src="https://img.shields.io/badge/YouTube-OmAI%20Lab%20Global-FF0000?logo=youtube&logoColor=white">
+  </a>
+  <a href="https://discord.gg/c3BNhbcyd">
+    <img alt="Discord" src="https://img.shields.io/badge/Discord-Join%20Community-5865F2?logo=discord&logoColor=white">
+  </a>
   <a href="https://om-ai-lab.github.io/2026_06_26_vlx_flow_en.html">
     <img alt="Blog" src="https://img.shields.io/badge/%F0%9F%93%9D%20Blog-Read%20Article-2563eb">
   </a>
-  <img alt="Demo coming soon" src="https://img.shields.io/badge/%F0%9F%9A%80%20Demo-Coming%20Soon-94a3b8">
+  <a href="https://om-agent.com">
+    <img alt="Try VLX" src="https://img.shields.io/badge/%F0%9F%9A%80%20Try%20VLX-Open%20Platform-16a34a">
+  </a>
   <a href="https://huggingface.co/blog/omlab/vlx-flow">
     <img alt="Hugging Face blog" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Read%20Blog-f9d54a">
   </a>
@@ -26,14 +34,43 @@
 
 <p align="center"><sub>Overview video: VLX-Flow for continuous video understanding.</sub></p>
 
-https://github.com/user-attachments/assets/79b5e715-a7ff-4328-88a5-6e30b7cd8755
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=VoTLjBgCAKk">
+    <img src="assets/figures/readme/demo-cover-en.jpg" alt="Watch the VLX-Flow overview video on YouTube" width="88%">
+  </a>
+  <br>
+  📺 HD version: <a href="https://www.youtube.com/watch?v=VoTLjBgCAKk">Watch on YouTube</a>
+</p>
 
+## Community
+
+Join the VLX community to connect with developers, explore applications, share feedback, and shape the future of multimodal AI.
+
+<table>
+  <tr>
+    <th align="center">Official WeChat</th>
+    <th align="center">Discord Community</th>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="assets/figures/社区二维码.png" alt="Official VLX WeChat QR code" width="400">
+    </td>
+    <td align="center">
+      <img src="assets/figures/联系方式.png" alt="VLX Discord community QR code" width="400">
+    </td>
+  </tr>
+</table>
+
+For technical support, partnerships, and community inquiries, contact us at: **[marketing@hzlh.com](mailto:marketing@hzlh.com)**
 
 ## Overview
 
-VLX-Flow is a streaming vision-language model design for real-time video understanding. It targets scenarios where video is not a pre-recorded file to be analyzed once, but a continuous input stream from cameras, robots, drones, media feeds, or edge devices.
+VLX-Flow is a streaming vision-language model that enables AI systems to continuously perceive, understand, and interact with real-time video streams. It targets scenarios where video is not a pre-recorded file to be analyzed once, but a continuous input stream from cameras, robots, drones, media feeds, or edge devices.
 
 VLX-Flow splits the input video into continuous chunks, encodes each new chunk, and incrementally updates internal stream memory. When a user asks a question, the model can answer from this maintained memory instead of rebuilding context from the full history.
+
+> [!TIP]
+> 🚀 **Try VLX** [**here**](https://om-agent.com) and explore how it enables machines to perceive, reason, and act in real time.
 
 <p align="center">
   <img src="assets/figures/readme/vlx-flow-overview.png" alt="VLX-Flow overview: streaming chunks, visual cache, semantic memory, and low-latency interaction" width="88%">
@@ -113,13 +150,3 @@ VLX-Flow is intended to support online video understanding workflows:
 ## Release
 
 Checkpoints: Coming soon
-
-
-
-## Follow us
-
-Follow Om AI Lab on [X](https://x.com/OmAI_lab), or scan the WeChat group QR code below for VLX updates and discussion.
-
-<p align="left">
-  <img src="assets/figures/qrcode.jpg" alt="WeChat community QR code" width="200">
-</p>
