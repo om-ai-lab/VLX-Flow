@@ -17,7 +17,7 @@
   <a href="https://www.youtube.com/@OmAILab_global">
     <img alt="YouTube" src="https://img.shields.io/badge/YouTube-OmAI%20Lab%20Global-FF0000?logo=youtube&logoColor=white">
   </a>
-  <a href="https://discord.gg/c3BNhbcyd">
+  <a href="https://discord.gg/SEVNjyXPef">
     <img alt="Discord" src="https://img.shields.io/badge/Discord-Join%20Community-5865F2?logo=discord&logoColor=white">
   </a>
   <a href="https://om-ai-lab.github.io/2026_06_26_vlx_flow_zh.html">
