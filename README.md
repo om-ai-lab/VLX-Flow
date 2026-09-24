@@ -35,11 +35,11 @@
 <p align="center"><sub>Overview video: VLX-Flow for continuous video understanding.</sub></p>
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=VoTLjBgCAKk">
+  <a href="https://www.youtube.com/watch?v=6XEpg83Fhsk">
     <img src="assets/figures/readme/demo-cover-en.jpg" alt="Watch the VLX-Flow overview video on YouTube" width="88%">
   </a>
   <br>
-  📺 HD version: <a href="https://www.youtube.com/watch?v=VoTLjBgCAKk">Watch on YouTube</a>
+  📺 HD version: <a href="https://www.youtube.com/watch?v=6XEpg83Fhsk">Watch on YouTube</a>
 </p>
 
 ## Community
