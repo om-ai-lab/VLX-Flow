@@ -36,11 +36,11 @@
 <p align="center"><sub>介绍视频：VLX-Flow 面向连续视频理解的流式多模态模型。</sub></p>
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=VoTLjBgCAKk">
+  <a href="https://www.youtube.com/watch?v=6XEpg83Fhsk">
     <img src="assets/figures/readme/demo-cover-zh.jpg" alt="在 YouTube 上观看 VLX-Flow 介绍视频" width="88%">
   </a>
   <br>
-  📺 高清版本：<a href="https://www.youtube.com/watch?v=VoTLjBgCAKk">在 YouTube 上观看</a>
+  📺 高清版本：<a href="https://www.youtube.com/watch?v=6XEpg83Fhsk">在 YouTube 上观看</a>
 </p>
 
 ## 社区
