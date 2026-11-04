@@ -1,38 +1,148 @@
+<a name="top"></a>
+
 <p align="center">
   <img src="assets/figures/readme/logo-small.png" alt="VLX-Flow logo" width="180">
 </p>
 
-<h1 align="center">VLX-Flow</h1>
+<h1 align="center">VLX-Flow 1.5</h1>
 
-<h3 align="center">Continuous Video Understanding for Multimodal Models</h3>
+<h3 align="center">Proactive Response Enhancement for On-Device Real-Time Streaming Video</h3>
 
 <p align="center">
   English | <a href="README_zh.md">中文</a>
 </p>
 
 <p align="center">
-  <a href="https://x.com/OmAI_lab">
-    <img alt="X" src="https://img.shields.io/badge/%F0%9F%93%A3%20X-Follow%20%40OmAI_lab-000000">
-  </a>
-  <a href="https://www.youtube.com/@OmAILab_global">
-    <img alt="YouTube" src="https://img.shields.io/badge/YouTube-OmAI%20Lab%20Global-FF0000?logo=youtube&logoColor=white">
-  </a>
-  <a href="https://discord.gg/SEVNjyXPef">
-    <img alt="Discord" src="https://img.shields.io/badge/Discord-Join%20Community-5865F2?logo=discord&logoColor=white">
-  </a>
-  <a href="https://om-ai-lab.github.io/2026_06_26_vlx_flow_en.html">
-    <img alt="Blog" src="https://img.shields.io/badge/%F0%9F%93%9D%20Blog-Read%20Article-2563eb">
+  <a href="https://om-ai-lab.github.io/2026_11_01_vlx_flow_1_5_en.html">
+    <img alt="Blog" src="https://img.shields.io/badge/%F0%9F%93%9D%20Blog-Read%20Article-2563eb?style=flat-square">
   </a>
   <a href="https://om-agent.com">
-    <img alt="Try VLX" src="https://img.shields.io/badge/%F0%9F%9A%80%20Try%20VLX-Open%20Platform-16a34a">
+    <img alt="Try VLX" src="https://img.shields.io/badge/%F0%9F%9A%80%20Try%20VLX-Open%20Platform-16a34a?style=flat-square">
   </a>
-  <a href="https://huggingface.co/blog/omlab/vlx-flow">
-    <img alt="Hugging Face blog" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Read%20Blog-f9d54a">
+  <a href="https://x.com/OmAI_lab">
+    <img alt="X" src="https://img.shields.io/badge/%F0%9F%93%A3%20X-Follow%20%40OmAI_lab-000000?style=flat-square">
+  </a>
+  <a href="https://www.youtube.com/@OmAILab_global">
+    <img alt="YouTube" src="https://img.shields.io/badge/YouTube-OmAI%20Lab%20Global-FF0000?logo=youtube&logoColor=white&amp;style=flat-square">
+  </a>
+  <a href="https://discord.gg/SEVNjyXPef">
+    <img alt="Discord" src="https://img.shields.io/badge/Discord-Join%20Community-5865F2?logo=discord&logoColor=white&amp;style=flat-square">
   </a>
 </p>
 
+<p align="center">
+  <a href="#highlights">Highlights</a> &nbsp;·&nbsp;
+  <a href="#proactive-demo">Proactive Response</a> &nbsp;·&nbsp;
+  <a href="#benchmarks">Benchmarks</a> &nbsp;·&nbsp;
+  <a href="#architecture">Architecture</a> &nbsp;·&nbsp;
+  <a href="#community">Community</a>
+</p>
 
-<p align="center"><sub>Overview video: VLX-Flow for continuous video understanding.</sub></p>
+---
+
+<a name="overview"></a>
+
+## 🌊 Overview
+
+VLX-Flow is a streaming multimodal model designed for on-device, real-time video understanding. Through **continuous video input, incremental state updates, and two-layer memory**, it supports proactive response, continuous description, and real-time question answering, providing ongoing semantic context for cameras, robots, and screen assistants.
+
+**VLX-Flow 1.5 builds on the existing streaming architecture, strengthening event triggering and silence control under persistent instructions, description coherence, and visual grounding in QA.** Two-layer memory and Linear Attention are inherited foundations; this update focuses on the continuous interaction they support.
+
+<a name="highlights"></a>
+
+## ✨ What's New in 1.5
+
+- **🔔 Stronger proactive response** — Observe under a persistent natural-language instruction, with improved event-triggered responses, return to silence, and control of repeated output.
+
+- **🎬 More coherent continuous description** — Strengthen semantic continuity across chunks so descriptions follow scene changes with less fragmentation and repetition.
+
+- **💬 Better visual grounding in real-time QA** — Answer from prior observations, expressing uncertainty or declining when evidence is insufficient.
+
+- **⚡ Streaming inference with output on demand** — Build on incremental processing and state reuse, using silence control to reduce redundant generation.
+
+<a name="proactive-demo"></a>
+
+## 🔔 Proactive Response Example
+
+> 💬 **Persistent instruction**
+>
+> “Let me know when someone wearing a black jacket appears.”
+
+The model keeps observing the video, responds when the instruction condition is met, and then resumes observation for subsequent qualifying events.
+
+<p align="center">
+  <img src="assets/figures/readme/proactive-response-en.png" alt="Illustrated proactive response flow: persistent instruction, silent observation, target event, response, and return to silence" width="100%">
+  <br>
+  <sub>Illustrated interaction flow: one instruction carries through subsequent observation and event responses.</sub>
+</p>
+
+<a name="capabilities"></a>
+
+## 🎯 Three Interaction Capabilities
+
+### 🔔 Proactive Response
+
+Once a user specifies an event of interest, the model combines the instruction, current visual evidence, and reply history to decide whether to keep observing, respond, or return to silence. Version 1.5 focuses on response timing and restrained output for task-driven camera observation and environmental alerts.
+
+### 🎬 Continuous Description
+
+The model describes scenes, subjects, and actions as video arrives, maintaining a timeline through semantic continuity across chunks. For example, “picking up a cup → walking to a table → putting it down” can form connected observation context for running commentary and follow-up questions.
+
+### 💬 Real-Time Question Answering
+
+Users can ask questions while a video plays or a camera runs, and the model answers from its maintained observation context. Version 1.5 strengthens visual grounding: if no boat has appeared, a question such as “Which way did that boat go?” should receive an explanation that no boat was observed, avoiding unsupported speculation.
+
+<a name="benchmarks"></a>
+
+## 📊 Evaluation Summary
+
+Selected quality metrics for VLX-Flow 1.5 across three public benchmarks are shown below. Follow “Full comparison” to view the corresponding model comparison table, task breakdowns, and evaluation notes in the technical blog.
+
+| Benchmark / task | Metric | VLX-Flow 1.5 | Detailed results |
+| --- | --- | ---: | --- |
+| 🎞️ StreamingBench Real-Time Visual | Overall | **85.00** | [Full comparison ↗](https://om-ai-lab.github.io/2026_11_01_vlx_flow_1_5_en.html#:~:text=Table%201.%20StreamingBench%20Real-Time%20Visual) |
+| 🕒 OVO-Bench | Overall (macro average of three groups) | **70.51** | [Full comparison ↗](https://om-ai-lab.github.io/2026_11_01_vlx_flow_1_5_en.html#:~:text=Table%202.%20OVO-Bench) |
+| 💬 TraceBench v1.1 · Real-time QA | QA accuracy | **76.5%** | [Full comparison ↗](https://om-ai-lab.github.io/2026_11_01_vlx_flow_1_5_en.html#:~:text=Table%203.%20TraceBench%20v1.1) |
+| 🔔 TraceBench v1.1 · Proactive response | In-window accuracy | **21.1%** | [Full comparison ↗](https://om-ai-lab.github.io/2026_11_01_vlx_flow_1_5_en.html#:~:text=Table%203.%20TraceBench%20v1.1) |
+
+StreamingBench and OVO-Bench use streaming evaluation aligned with official settings, with an average of 64 frames viewed per question in QA mode. Metrics differ across benchmarks; compare scores within each benchmark.
+
+<a name="architecture"></a>
+
+## 🧠 Streaming Architecture and Behavior Training
+
+### 🗂️ Continuous Input and Two-Layer Memory
+
+VLX-Flow processes consecutive video chunks in temporal order. The visual encoder extracts features from the current chunk, and the language backbone performs incremental inference using existing state, avoiding full-history reprocessing for every interaction.
+
+- **Visual cache:** retains recent visual details for immediate QA and event judgment.
+- **Semantic memory:** accumulates prior observations, continuous descriptions, and interaction history to maintain context across chunks.
+
+<p align="center">
+  <img src="assets/figures/readme/vlx-flow-overview.png" alt="VLX-Flow architecture: continuous video chunks, visual cache, semantic memory, and interaction" width="88%">
+  <br>
+  <sub>The streaming foundation inherited by 1.5: continuous observation, incremental updates, and persistent memory.</sub>
+</p>
+
+### ⚡ State Reuse and Output on Demand
+
+Linear Attention modules in the language backbone aggregate history through recurrent state, supporting cache reuse and reducing repeated computation and memory pressure during long video interactions. Version 1.5 further optimizes silence and response behavior to reduce unnecessary decoding while video observation continues.
+
+<p align="center">
+  <img src="assets/figures/readme/ttft-comparison.png" alt="TTFT trends for Full Attention, SlideWindow, and VLX-Flow from the original architecture introduction" width="88%">
+  <br>
+  <sub>TTFT trend figure from the original Flow introduction, included as architecture background; this is not a new performance test of 1.5.</sub>
+</p>
+
+### 🎓 Behavior Training for Continuous Interaction
+
+Streaming behavior supervision in 1.5 aligns response content with interaction state at each round, including whether the instruction condition is met, whether a reply has already been given, and whether observation should continue. The accompanying Streaming RL procedure builds on the VLM-R1 multimodal reinforcement learning paradigm to evaluate semantic quality and response timing over complete streaming episodes, comparing response trajectories to optimize premature, repeated, and missed responses.
+
+<a name="video"></a>
+
+## 🎬 Background Video
+
+This video introduces continuous video understanding in the original VLX-Flow. For 1.5 updates, see the highlights and technical blog above.
 
 <p align="center">
   <a href="https://www.youtube.com/watch?v=6XEpg83Fhsk">
@@ -42,7 +152,21 @@
   📺 HD version: <a href="https://www.youtube.com/watch?v=6XEpg83Fhsk">Watch on YouTube</a>
 </p>
 
-## Community
+Architecture background: [Original English blog](https://om-ai-lab.github.io/2026_06_26_vlx_flow_en.html) · [Original Hugging Face blog](https://huggingface.co/blog/omlab/vlx-flow)
+
+<a name="access"></a>
+
+## 📦 Repository Scope and Access
+
+This repository provides the official VLX-Flow technical overview, capability demonstrations, and evaluation summaries. **Model training and inference code will not be open-sourced.** The repository currently provides no model weight downloads or local deployment packages.
+
+Visit the [VLX platform](https://om-agent.com) to explore its available capabilities; supported features and model versions are as listed on the platform. The on-device positioning describes the model's design direction; this repository provides no edge deployment tools.
+
+Documentation corrections, broken-link reports, and usage feedback are welcome. See [Contributing](CONTRIBUTING.md).
+
+<a name="community"></a>
+
+## 🤝 Community
 
 Join the VLX community to connect with developers, explore applications, share feedback, and shape the future of multimodal AI.
 
@@ -53,100 +177,16 @@ Join the VLX community to connect with developers, explore applications, share f
   </tr>
   <tr>
     <td align="center">
-      <img src="assets/figures/社区二维码.png" alt="Official VLX WeChat QR code" width="400">
+      <img src="assets/figures/社区二维码.png" alt="Official VLX WeChat QR code" width="240">
     </td>
     <td align="center">
-      <img src="assets/figures/联系方式.png" alt="VLX Discord community QR code" width="400">
+      <img src="assets/figures/联系方式.png" alt="VLX Discord community QR code" width="240">
     </td>
   </tr>
 </table>
 
 For technical support, partnerships, and community inquiries, contact us at: **[marketing@hzlh.com](mailto:marketing@hzlh.com)**
 
-## Overview
-
-VLX-Flow is a streaming vision-language model that enables AI systems to continuously perceive, understand, and interact with real-time video streams. It targets scenarios where video is not a pre-recorded file to be analyzed once, but a continuous input stream from cameras, robots, drones, media feeds, or edge devices.
-
-VLX-Flow splits the input video into continuous chunks, encodes each new chunk, and incrementally updates internal stream memory. When a user asks a question, the model can answer from this maintained memory instead of rebuilding context from the full history.
-
-> [!TIP]
-> 🚀 **Try VLX** [**here**](https://om-agent.com) and explore how it enables machines to perceive, reason, and act in real time.
-
 <p align="center">
-  <img src="assets/figures/readme/vlx-flow-overview.png" alt="VLX-Flow overview: streaming chunks, visual cache, semantic memory, and low-latency interaction" width="88%">
-  <br>
-  <sub>VLX-Flow processes streaming chunks and maintains visual cache plus semantic memory for low-latency interaction.</sub>
+  <a href="#top">↑ Back to top</a>
 </p>
-
-## Why VLX-Flow
-
-Most video understanding VLMs rely on full-frame input or fixed sampling. These strategies are useful for offline video analysis, but they are less suitable for online settings where video keeps changing and user questions may arrive at any moment.
-
-VLX-Flow is designed to shift video understanding from:
-
-```text
-offline video request -> full reprocessing -> answer
-```
-
-to:
-
-```text
-continuous observation -> incremental memory update -> instant interaction
-```
-
-The design focuses on:
-
-- **Streaming-first processing:** process video chunks as they arrive instead of reprocessing the full history.
-- **Internal stream memory:** maintain visual cache and semantic memory inside the model.
-- **Low-latency interaction:** answer from maintained memory as streams grow.
-
-## Core Ideas
-
-### Streaming Input
-
-VLX-Flow divides video into consecutive chunks. Each chunk contains a small number of frames and is processed in temporal order.
-
-For each incoming chunk:
-
-1. The visual encoder converts the new frames into model-readable visual features.
-2. The language model consumes those features together with the current context.
-3. The model updates its visual cache and semantic memory.
-4. Previous history is preserved in compressed form rather than repeatedly appended as raw frames.
-
-This avoids the two extremes of dropping old information entirely or keeping an ever-growing full-history context.
-
-### Two-Layer Memory
-
-VLX-Flow maintains internal stream memory through two complementary layers:
-
-- **Visual cache:** keeps recent frame-level details for immediate interaction and event detection.
-- **Semantic memory:** stores high-level context accumulated inside the model from the video stream and interactions, including streaming descriptions, prior observations, user questions, model answers, and dialogue context.
-
-The two layers work together: the visual cache protects recent details, while semantic memory keeps the longer temporal narrative coherent.
-
-### Cache-Aware Inference
-
-VLX-Flow uses cache-aware execution so that new chunks can be processed incrementally. The language model includes Linear Attention components. Compared with standard self-attention, which requires a growing KV cache as sequence length increases, Linear Attention can preserve history through recurrent state and update it incrementally.
-
-This provides two practical benefits:
-
-- **More stable latency:** the system does not need to recompute the full history for each new interaction.
-- **Smoother memory growth:** long video streams can maintain semantic continuity with lower memory pressure.
-
-<p align="center">
-  <img src="assets/figures/readme/ttft-comparison.png" alt="TTFT comparison between Full Attention, SlideWindow, and VLX-Flow" width="88%">
-  <br>
-  <sub>Time to first token (TTFT) as the number of input images increases. Full Attention (orange) rises steadily as the historical context grows. SlideWindow (green) limits history with window resets, producing a rise-reset-rise pattern. VLX-Flow (red) compresses history through its two-layer memory mechanism, keeping TTFT low and stable over long sequences.</sub>
-</p>
-
-## Capabilities
-
-VLX-Flow is intended to support online video understanding workflows:
-
-- **Streaming captioning:** continuously describes incoming video while preserving temporal continuity.
-- **Real-time video question answering:** answers questions while video is playing or while a camera is running.
-- **Event-triggered interaction:** can be extended toward alerts when maintained state satisfies a specified event condition.
-
-## Release
-
-Checkpoints: Coming soon
