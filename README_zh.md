@@ -1,39 +1,148 @@
+<a name="top"></a>
+
 <p align="center">
   <img src="assets/figures/readme/logo-small.png" alt="VLX-Flow logo" width="180">
 </p>
 
-<h1 align="center">VLX-Flow</h1>
+<h1 align="center">VLX-Flow 1.5</h1>
 
-<h3 align="center">让多模态模型持续看见视频世界</h3>
+<h3 align="center">面向端侧实时流式视频的主动响应增强</h3>
 
 <p align="center">
   <a href="README.md">English</a> | 中文
 </p>
 
 <p align="center">
-  <a href="https://x.com/OmAI_lab">
-    <img alt="X" src="https://img.shields.io/badge/%F0%9F%93%A3%20X-%E5%85%B3%E6%B3%A8%20%40OmAI_lab-000000">
-  </a>
-  <a href="https://www.youtube.com/@OmAILab_global">
-    <img alt="YouTube" src="https://img.shields.io/badge/YouTube-OmAI%20Lab%20Global-FF0000?logo=youtube&logoColor=white">
-  </a>
-  <a href="https://discord.gg/SEVNjyXPef">
-    <img alt="Discord" src="https://img.shields.io/badge/Discord-Join%20Community-5865F2?logo=discord&logoColor=white">
-  </a>
-  <a href="https://om-ai-lab.github.io/2026_06_26_vlx_flow_zh.html">
-    <img alt="博客" src="https://img.shields.io/badge/%F0%9F%93%9D%20%E5%8D%9A%E5%AE%A2-%E9%98%85%E8%AF%BB%E6%96%87%E7%AB%A0-2563eb">
+  <a href="https://om-ai-lab.github.io/2026_11_01_vlx_flow_1_5_zh.html">
+    <img alt="博客" src="https://img.shields.io/badge/%F0%9F%93%9D%20%E5%8D%9A%E5%AE%A2-%E9%98%85%E8%AF%BB%E6%96%87%E7%AB%A0-2563eb?style=flat-square">
   </a>
   <a href="https://om-agent.com">
-    <img alt="体验页面" src="https://img.shields.io/badge/%F0%9F%9A%80%20%E4%BD%93%E9%AA%8C%E9%A1%B5%E9%9D%A2-%E7%AB%8B%E5%8D%B3%E4%BD%93%E9%AA%8C-16a34a">
+    <img alt="体验页面" src="https://img.shields.io/badge/%F0%9F%9A%80%20%E4%BD%93%E9%AA%8C%E9%A1%B5%E9%9D%A2-%E7%AB%8B%E5%8D%B3%E4%BD%93%E9%AA%8C-16a34a?style=flat-square">
   </a>
-  <a href="https://huggingface.co/blog/omlab/vlx-flow">
-    <img alt="Hugging Face 博客" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-%E9%98%85%E8%AF%BB%E6%96%87%E7%AB%A0-f9d54a">
+  <a href="https://x.com/OmAI_lab">
+    <img alt="X" src="https://img.shields.io/badge/%F0%9F%93%A3%20X-%E5%85%B3%E6%B3%A8%20%40OmAI_lab-000000?style=flat-square">
+  </a>
+  <a href="https://www.youtube.com/@OmAILab_global">
+    <img alt="YouTube" src="https://img.shields.io/badge/YouTube-OmAI%20Lab%20Global-FF0000?logo=youtube&logoColor=white&amp;style=flat-square">
+  </a>
+  <a href="https://discord.gg/SEVNjyXPef">
+    <img alt="Discord" src="https://img.shields.io/badge/Discord-Join%20Community-5865F2?logo=discord&logoColor=white&amp;style=flat-square">
   </a>
 </p>
 
+<p align="center">
+  <a href="#highlights">更新亮点</a> &nbsp;·&nbsp;
+  <a href="#proactive-demo">主动响应</a> &nbsp;·&nbsp;
+  <a href="#benchmarks">评测结果</a> &nbsp;·&nbsp;
+  <a href="#architecture">技术架构</a> &nbsp;·&nbsp;
+  <a href="#community">社区</a>
+</p>
 
+---
 
-<p align="center"><sub>介绍视频：VLX-Flow 面向连续视频理解的流式多模态模型。</sub></p>
+<a name="overview"></a>
+
+## 🌊 项目概览
+
+VLX-Flow 是面向端侧实时视频的流式多模态模型，通过**连续视频输入、增量状态更新与双层记忆**，支持主动响应、持续描述和实时问答，为摄像头、机器人与屏幕助手提供持续更新的环境语义。
+
+**VLX-Flow 1.5 延续已有流式架构，重点增强常驻指令下的事件触发与静默控制，并改善描述连贯性和问答的视觉依据。** 双层记忆与 Linear Attention 是已有架构基础，本次升级着重提升它们所支撑的连续交互能力。
+
+<a name="highlights"></a>
+
+## ✨ 1.5 更新亮点
+
+- **🔔 更强的主动响应** — 根据一句自然语言常驻指令持续观察，优化目标事件出现时的响应、回复后的静默与重复输出控制。
+
+- **🎬 更连贯的持续描述** — 加强跨片段语义衔接，让描述跟随场景变化，减少叙述割裂与重复。
+
+- **💬 更注重视觉依据的实时问答** — 结合已有观察作答，信息不足时说明不确定性或合理拒答。
+
+- **⚡ 按需输出的流式推理** — 在已有增量处理与状态复用基础上，通过静默控制减少冗余生成开销。
+
+<a name="proactive-demo"></a>
+
+## 🔔 主动响应示例
+
+> 💬 **常驻指令**
+>
+> “画面里出现穿黑色外套的人就告诉我。”
+
+模型持续观察视频，在指令条件满足时主动响应，随后恢复观察，等待后续符合条件的事件。
+
+<p align="center">
+  <img src="assets/figures/readme/proactive-response-zh.png" alt="主动响应流程示意：常驻指令、静默观察、目标事件出现、主动响应、恢复静默" width="100%">
+  <br>
+  <sub>交互流程示意：一次指令贯穿后续观察与事件响应。</sub>
+</p>
+
+<a name="capabilities"></a>
+
+## 🎯 三项交互能力
+
+### 🔔 主动响应
+
+用户设定关注的事件后，模型结合指令条件、当前画面与已有回复记录，判断是否继续观察、主动响应或恢复静默。1.5 重点优化触发时机与输出节制，适用于按任务观察的摄像头和环境变化提醒等场景。
+
+### 🎬 持续描述
+
+模型随视频推进描述场景、主体与动作变化，并通过跨片段语义衔接保持时间线。例如，“拿起杯子 → 走向桌边 → 放下杯子”可形成连贯的观察上下文，为持续讲解和后续问答提供依据。
+
+### 💬 实时问答
+
+用户可在视频播放或摄像头运行过程中随时提问，模型基于已维护的观察上下文回答。1.5 强化视觉依据约束：例如，画面中没有出现船时，对“刚才那艘船往哪边开？”应指出未观察到船，避免无依据推测。
+
+<a name="benchmarks"></a>
+
+## 📊 评测摘要
+
+以下展示 VLX-Flow 1.5 在三项公开基准上的核心质量指标。点击“完整对比”可查看技术博客中对应的模型对照表、分项结果与评测说明。
+
+| 基准 / 任务 | 指标 | VLX-Flow 1.5 | 详细结果 |
+| --- | --- | ---: | --- |
+| 🎞️ StreamingBench Real-Time Visual | Overall | **85.00** | [完整对比 ↗](https://om-ai-lab.github.io/2026_11_01_vlx_flow_1_5_zh.html#:~:text=%E8%A1%A8%201.%20StreamingBench%20Real-Time%20Visual) |
+| 🕒 OVO-Bench | Overall（三组宏平均） | **70.51** | [完整对比 ↗](https://om-ai-lab.github.io/2026_11_01_vlx_flow_1_5_zh.html#:~:text=%E8%A1%A8%202.%20OVO-Bench) |
+| 💬 TraceBench v1.1 · 实时问答 | QA 准确率 | **76.5%** | [完整对比 ↗](https://om-ai-lab.github.io/2026_11_01_vlx_flow_1_5_zh.html#:~:text=%E8%A1%A8%203.%20TraceBench%20v1.1) |
+| 🔔 TraceBench v1.1 · 主动响应 | 窗口内准确率 | **21.1%** | [完整对比 ↗](https://om-ai-lab.github.io/2026_11_01_vlx_flow_1_5_zh.html#:~:text=%E8%A1%A8%203.%20TraceBench%20v1.1) |
+
+StreamingBench 与 OVO-Bench 采用与官方对齐的流式评测方式，问答模式每题平均查看 64 帧。各基准指标定义不同，分数应在各自基准内比较。
+
+<a name="architecture"></a>
+
+## 🧠 流式架构与行为训练
+
+### 🗂️ 连续输入与双层记忆
+
+VLX-Flow 按时间顺序处理连续视频片段：视觉编码器提取当前片段特征，语言主干结合已有状态进行增量推理，避免为每次交互重新处理完整历史。
+
+- **视觉缓存：** 保留近期画面细节，支持即时问答与事件判断。
+- **语义记忆：** 累积先前观察、持续描述和交互历史，维护跨片段上下文。
+
+<p align="center">
+  <img src="assets/figures/readme/vlx-flow-overview.png" alt="VLX-Flow 架构：连续视频片段、视觉缓存、语义记忆与交互" width="88%">
+  <br>
+  <sub>1.5 延续的流式架构基础：连续观察、增量更新与持续记忆。</sub>
+</p>
+
+### ⚡ 状态复用与按需输出
+
+语言主干中的 Linear Attention 模块通过可递推状态聚合历史信息，支持缓存复用，降低长视频交互中的重复计算与内存压力。1.5 进一步优化静默与响应行为，减少不必要的解码；视频观察仍持续进行。
+
+<p align="center">
+  <img src="assets/figures/readme/ttft-comparison.png" alt="原版 Flow 架构介绍中的 Full Attention、SlideWindow 与 VLX-Flow 首 token 延迟趋势对比" width="88%">
+  <br>
+  <sub>原版 Flow 技术介绍中的 TTFT 趋势图，用于说明架构背景；本图不是 1.5 的新增性能测试。</sub>
+</p>
+
+### 🎓 面向连续交互的行为训练
+
+1.5 的流式行为监督将响应内容与逐轮交互状态对齐，包括是否满足指令条件、是否已回复以及是否应继续观察。配套 Streaming RL 基于 VLM-R1 的多模态强化学习范式，在完整流式回合中评价语义质量与响应时机，并比较多条响应轨迹，针对抢答、重复输出和漏答优化交互行为。
+
+<a name="video"></a>
+
+## 🎬 基础介绍视频
+
+以下视频介绍原版 VLX-Flow 的连续视频理解能力；1.5 的更新请参阅上方亮点与技术博客。
 
 <p align="center">
   <a href="https://www.youtube.com/watch?v=6XEpg83Fhsk">
@@ -43,111 +152,41 @@
   📺 高清版本：<a href="https://www.youtube.com/watch?v=6XEpg83Fhsk">在 YouTube 上观看</a>
 </p>
 
-## 社区
+架构背景：[原版中文博客](https://om-ai-lab.github.io/2026_06_26_vlx_flow_zh.html) · [原版 Hugging Face 博客](https://huggingface.co/blog/omlab/vlx-flow)
+
+<a name="access"></a>
+
+## 📦 仓库范围与访问
+
+本仓库提供 VLX-Flow 的官方技术介绍、能力展示素材和评测摘要。**模型训练与推理代码不对外开源。** 当前仓库不提供模型权重下载或本地部署包。
+
+可通过 [VLX 平台](https://om-agent.com)了解和体验平台提供的能力；具体可用功能与模型版本以平台为准。本文的端侧定位描述模型的设计方向，本仓库不提供端侧部署工具。
+
+欢迎提交文档修正、链接问题和使用反馈，详见[贡献说明](CONTRIBUTING.md)。
+
+<a name="community"></a>
+
+## 🤝 社区
 
 加入 VLX 社区，与开发者交流，探索应用，分享反馈，共同塑造多模态 AI 的未来。
 
 <table>
   <tr>
-    <th align="center">Official WeChat</th>
-    <th align="center">Discord Community</th>
+    <th align="center">官方微信</th>
+    <th align="center">Discord 社区</th>
   </tr>
   <tr>
     <td align="center">
-      <img src="assets/figures/社区二维码.png" alt="VLX 官方微信二维码" width="400">
+      <img src="assets/figures/社区二维码.png" alt="VLX 官方微信二维码" width="240">
     </td>
     <td align="center">
-      <img src="assets/figures/联系方式.png" alt="VLX Discord 社区二维码" width="400">
+      <img src="assets/figures/联系方式.png" alt="VLX Discord 社区二维码" width="240">
     </td>
   </tr>
 </table>
 
 如需技术支持、商务合作或社区咨询，请联系：**[marketing@hzlh.com](mailto:marketing@hzlh.com)**
 
-## 项目概览
-
-VLX-Flow 是一个流式视觉语言模型，使 AI 系统能够持续感知、理解并与实时视频流交互。它关注的场景不是把预录视频作为一次性文件处理，而是来自摄像头、机器人、无人机、媒体流或边缘设备的连续输入流。
-
-VLX-Flow 将输入视频拆成连续片段，编码每个新片段，并以增量方式更新模型内部的流式记忆。当用户提问时，模型可以直接从这份已维护的记忆中回答，而不需要从完整历史重新构建上下文。
-
-> [!TIP]
-> 🚀 **立即体验 VLX**：[点击这里](https://om-agent.com)，探索 VLX 如何让机器实时感知、推理并采取行动。
-
 <p align="center">
-  <img src="assets/figures/readme/vlx-flow-overview.png" alt="VLX-Flow 总览图：流式片段、视觉缓存、语义记忆与低延迟交互" width="88%">
-  <br>
-  <sub>VLX-Flow 处理连续输入的视频片段，并维护视觉缓存与语义记忆以支持低延迟交互。</sub>
+  <a href="#top">↑ 返回顶部</a>
 </p>
-
-## 为什么需要 VLX-Flow
-
-多数视频理解 VLM 依赖全帧输入或固定采样。这两类方法适合离线视频分析，但不太适合在线场景：在真实环境中，视频持续变化，用户问题也可能在任意时刻出现。
-
-VLX-Flow 的目标是将视频理解从：
-
-```text
-离线视频请求 -> 全量重新处理 -> 回答
-```
-
-转变为：
-
-```text
-持续观察 -> 增量记忆更新 -> 即时交互
-```
-
-这个设计关注：
-
-- **流式优先处理：** 在视频片段到达时增量处理，而不是反复重处理完整历史。
-- **模型内部流式记忆：** 在模型内部维护视觉缓存和语义记忆。
-- **低延迟交互：** 随视频流增长，仍然从已维护记忆中回答。
-
-## 核心思路
-
-### 流式输入
-
-VLX-Flow 将视频划分为连续片段。每个片段包含少量帧，并按时间顺序处理。
-
-对于每个新片段：
-
-1. 视觉编码器将新帧转换为模型可读取的视觉特征。
-2. 语言模型结合当前上下文消费这些特征。
-3. 模型更新视觉缓存和语义记忆。
-4. 历史信息以压缩状态保留，而不是反复追加为原始帧。
-
-这避免了两个极端：完全丢弃旧信息，或者保留无限增长的完整历史上下文。
-
-### 双层记忆
-
-VLX-Flow 通过两层互补结构维护模型内部的流式记忆：
-
-- **视觉缓存：** 保留近期帧级细节，用于即时交互和事件检测。
-- **语义记忆：** 存储模型内部从视频流和交互中持续累积的高层上下文，包括流式描述、先前观察、用户问题、模型回答和对话上下文。
-
-两层记忆协同工作：视觉缓存保护近期细节，语义记忆保持更长时间范围的叙事连贯性。
-
-### 缓存感知推理
-
-VLX-Flow 使用缓存感知执行，使新片段可以被增量处理。语言模型包含 Linear Attention 模块。相比标准自注意力随序列增长需要持续扩大的 KV cache，Linear Attention 可以通过递推状态保留历史并进行增量更新。
-
-这带来两个实际收益：
-
-- **延迟更稳定：** 系统不需要为每次新交互重新计算完整历史。
-- **记忆增长更平滑：** 长视频流可以在更低内存压力下保持语义连续性。
-
-<p align="center">
-  <img src="assets/figures/readme/ttft-comparison.png" alt="Full Attention、SlideWindow 与 VLX-Flow 的 TTFT 对比" width="88%">
-  <br>
-  <sub>首 token 生成时延（TTFT）随输入图像数量变化的趋势对比。Full Attention（橙色）随着历史上下文变长持续上升；SlideWindow（绿色）通过窗口重置限制历史长度，因此呈现“上升-重置-再上升”的波动趋势；VLX-Flow（红色）通过双层记忆机制压缩历史状态，使 TTFT 在长序列下仍保持较低且稳定。</sub>
-</p>
-
-## 能力
-
-VLX-Flow 旨在支持多种在线视频理解工作流：
-
-- **流式视频描述：** 在视频持续进入时生成描述，并保持时间连续性。
-- **实时视频问答：** 用户可以在视频播放或摄像头运行过程中提问，模型基于已维护上下文回答。
-- **事件触发式交互：** 后续可扩展到当维护状态满足特定事件条件时生成提醒。
-
-## 发布
-
-模型即将发布
