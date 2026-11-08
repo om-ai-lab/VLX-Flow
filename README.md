@@ -33,6 +33,7 @@
 <p align="center">
   <a href="#highlights">Highlights</a> &nbsp;·&nbsp;
   <a href="#proactive-demo">Proactive Response</a> &nbsp;·&nbsp;
+  <a href="#api-examples">API Notebooks</a> &nbsp;·&nbsp;
   <a href="#benchmarks">Benchmarks</a> &nbsp;·&nbsp;
   <a href="#architecture">Architecture</a> &nbsp;·&nbsp;
   <a href="#community">Community</a>
@@ -92,6 +93,19 @@ The model describes scenes, subjects, and actions as video arrives, maintaining 
 
 Users can ask questions while a video plays or a camera runs, and the model answers from its maintained observation context. Version 1.5 strengthens visual grounding: if no boat has appeared, a question such as “Which way did that boat go?” should receive an explanation that no boat was observed, avoiding unsupported speculation.
 
+<a name="api-examples"></a>
+
+## 📓 Public API Notebooks
+
+Run the online API with the included local MP4 samples. Start with the quickstart to learn the requests, then use the playground to explore the same capabilities interactively.
+
+| Notebook | What it covers |
+| --- | --- |
+| [01 · API quickstart](examples/notebooks/01_api_quickstart.ipynb) | Upload a video, set instructions, receive streaming text, ask follow-up questions, close the session, and optionally run two sessions in parallel. |
+| [02 · Interactive playground](examples/notebooks/02_interactive_playground.ipynb) | Preview video, adjust parameters, switch description/detection instructions, ask questions, and view two independent analysis streams. |
+
+See [setup and run order](examples/README.md) and [how the playground works](examples/docs/interactive_playground.md). Notebook instructions are currently in Chinese. You need a platform API endpoint, access token, and model access; parallel mode uses two sessions and does not guarantee frame synchronization. Upload runs explicitly, and analysis starts only when you run the start cell or click Start.
+
 <a name="benchmarks"></a>
 
 ## 📊 Evaluation Summary
@@ -106,6 +120,27 @@ Selected quality metrics for VLX-Flow 1.5 across three public benchmarks are sho
 | 🔔 TraceBench v1.1 · Proactive response | In-window accuracy | **21.1%** | [Full comparison ↗](https://om-ai-lab.github.io/2026_11_01_vlx_flow_1_5_en.html#:~:text=Table%203.%20TraceBench%20v1.1) |
 
 StreamingBench and OVO-Bench use streaming evaluation aligned with official settings, with an average of 64 frames viewed per question in QA mode. Metrics differ across benchmarks; compare scores within each benchmark.
+
+### 📍 Citing Trace
+
+If you find [Trace](https://arxiv.org/abs/2609.30670) useful, please cite it using the following BibTeX:
+
+<details>
+<summary>BibTeX</summary>
+
+```bibtex
+@misc{ma2026tracetemporalauditconditionaware,
+  title={TRACE: Temporal Audit and Condition-aware Evaluation of Streaming Video Understanding},
+  author={Yibo Ma and Qianqian Zhang and Peng Liu and Tiancheng Zhao},
+  year={2026},
+  eprint={2609.30670},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL},
+  url={https://arxiv.org/abs/2609.30670},
+}
+```
+
+</details>
 
 <a name="architecture"></a>
 
@@ -158,7 +193,7 @@ Architecture background: [Original English blog](https://om-ai-lab.github.io/202
 
 ## 📦 Repository Scope and Access
 
-This repository provides the official VLX-Flow technical overview, capability demonstrations, and evaluation summaries. **Model training and inference code will not be open-sourced.** The repository currently provides no model weight downloads or local deployment packages.
+This repository provides the official VLX-Flow technical overview, capability demonstrations, evaluation summaries, and public API client examples. **Model training and inference code will not be open-sourced.** The repository currently provides no model weight downloads or local deployment packages.
 
 Visit the [VLX platform](https://om-agent.com) to explore its available capabilities; supported features and model versions are as listed on the platform. The on-device positioning describes the model's design direction; this repository provides no edge deployment tools.
 

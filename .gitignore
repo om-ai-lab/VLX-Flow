@@ -6,3 +6,5 @@ dist/
 .agents/
 .codex/
 README_structure_draft*.md
+.venv/
+**/.ipynb_checkpoints/
