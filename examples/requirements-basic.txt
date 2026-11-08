@@ -1,0 +1,5 @@
+jupyterlab>=4.4,<5
+ipykernel>=6.29,<8
+websockets>=15,<16
+httpx[socks]>=0.28,<0.29
+python-socks[asyncio]>=2.5,<3

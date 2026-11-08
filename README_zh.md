@@ -33,6 +33,7 @@
 <p align="center">
   <a href="#highlights">更新亮点</a> &nbsp;·&nbsp;
   <a href="#proactive-demo">主动响应</a> &nbsp;·&nbsp;
+  <a href="#api-examples">API 示例</a> &nbsp;·&nbsp;
   <a href="#benchmarks">评测结果</a> &nbsp;·&nbsp;
   <a href="#architecture">技术架构</a> &nbsp;·&nbsp;
   <a href="#community">社区</a>
@@ -92,6 +93,19 @@ VLX-Flow 是面向端侧实时视频的流式多模态模型，通过**连续视
 
 用户可在视频播放或摄像头运行过程中随时提问，模型基于已维护的观察上下文回答。1.5 强化视觉依据约束：例如，画面中没有出现船时，对“刚才那艘船往哪边开？”应指出未观察到船，避免无依据推测。
 
+<a name="api-examples"></a>
+
+## 📓 公开 API Notebooks
+
+使用仓库自带的本地 MP4 调用线上 API。先通过基础版学习请求流程，再用进阶版交互体验同样的能力。
+
+| Notebook | 内容 |
+| --- | --- |
+| [01 · API 基础](examples/notebooks/01_api_quickstart.ipynb) | 上传视频、设置指令、流式接收、会话内追问、停止，以及可选双路并行。 |
+| [02 · 进阶交互](examples/notebooks/02_interactive_playground.ipynb) | 视频预览、参数调节、描述／检测指令切换、追问，以及两路独立分析结果展示。 |
+
+安装与操作顺序见[示例说明](examples/README.md)，页面与 API 的对应关系见[进阶版工作原理](examples/docs/interactive_playground.md)。运行需要平台提供的 API 地址、访问令牌和模型权限；双路模式使用两个会话，不保证逐帧同步。上传由单元格显式执行，运行启动单元格或点击开始才会启动分析。
+
 <a name="benchmarks"></a>
 
 ## 📊 评测摘要
@@ -106,6 +120,27 @@ VLX-Flow 是面向端侧实时视频的流式多模态模型，通过**连续视
 | 🔔 TraceBench v1.1 · 主动响应 | 窗口内准确率 | **21.1%** | [完整对比 ↗](https://om-ai-lab.github.io/2026_11_01_vlx_flow_1_5_zh.html#:~:text=%E8%A1%A8%203.%20TraceBench%20v1.1) |
 
 StreamingBench 与 OVO-Bench 采用与官方对齐的流式评测方式，问答模式每题平均查看 64 帧。各基准指标定义不同，分数应在各自基准内比较。
+
+### 📍 引用 Trace
+
+如果您觉得 [Trace](https://arxiv.org/abs/2609.30670) 有用，请使用以下 BibTeX 进行引用：
+
+<details>
+<summary>BibTeX</summary>
+
+```bibtex
+@misc{ma2026tracetemporalauditconditionaware,
+  title={TRACE: Temporal Audit and Condition-aware Evaluation of Streaming Video Understanding},
+  author={Yibo Ma and Qianqian Zhang and Peng Liu and Tiancheng Zhao},
+  year={2026},
+  eprint={2609.30670},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL},
+  url={https://arxiv.org/abs/2609.30670},
+}
+```
+
+</details>
 
 <a name="architecture"></a>
 
@@ -158,7 +193,7 @@ VLX-Flow 按时间顺序处理连续视频片段：视觉编码器提取当前�
 
 ## 📦 仓库范围与访问
 
-本仓库提供 VLX-Flow 的官方技术介绍、能力展示素材和评测摘要。**模型训练与推理代码不对外开源。** 当前仓库不提供模型权重下载或本地部署包。
+本仓库提供 VLX-Flow 的官方技术介绍、能力展示素材、评测摘要和公开 API 客户端示例。**模型训练与推理代码不对外开源。** 当前仓库不提供模型权重下载或本地部署包。
 
 可通过 [VLX 平台](https://om-agent.com)了解和体验平台提供的能力；具体可用功能与模型版本以平台为准。本文的端侧定位描述模型的设计方向，本仓库不提供端侧部署工具。
 
