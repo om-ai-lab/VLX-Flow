@@ -16,7 +16,7 @@
   <a href="https://om-ai-lab.github.io/2026_11_01_vlx_flow_1_5_en.html">
     <img alt="Blog" src="https://img.shields.io/badge/%F0%9F%93%9D%20Blog-Read%20Article-2563eb?style=flat-square">
   </a>
-  <a href="https://om-agent.com">
+  <a href="https://platform.om-ai.com">
     <img alt="Try VLX" src="https://img.shields.io/badge/%F0%9F%9A%80%20Try%20VLX-Open%20Platform-16a34a?style=flat-square">
   </a>
   <a href="https://x.com/OmAI_lab">
@@ -195,7 +195,7 @@ Architecture background: [Original English blog](https://om-ai-lab.github.io/202
 
 This repository provides the official VLX-Flow technical overview, capability demonstrations, evaluation summaries, and public API client examples. **Model training and inference code will not be open-sourced.** The repository currently provides no model weight downloads or local deployment packages.
 
-Visit the [VLX platform](https://om-agent.com) to explore its available capabilities; supported features and model versions are as listed on the platform. The on-device positioning describes the model's design direction; this repository provides no edge deployment tools.
+Visit the [VLX platform](https://platform.om-ai.com) to explore its available capabilities; supported features and model versions are as listed on the platform. The on-device positioning describes the model's design direction; this repository provides no edge deployment tools.
 
 Documentation corrections, broken-link reports, and usage feedback are welcome. See [Contributing](CONTRIBUTING.md).
 
